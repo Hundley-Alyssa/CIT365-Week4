@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace MegaDesk_3_AlyssaHundley
 {
-    public partial class Form1 : Form
+    public partial class SearchQuotes : Form
     {
-        public Form1()
+        public SearchQuotes()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var MainMenuForm = (MainMenu)Tag;
+            MainMenuForm.Show();
+            Close();
         }
     }
 }
