@@ -10,10 +10,9 @@ namespace MegaDesk_3_AlyssaHundley
     {
         public int Width { get; set; }
         public int Depth { get; set; }
-        public int Drawers { get; set; }
-        public string Material { get; set; }
-        public int Rush { get; set; }
-
+        public int NumberOfDrawers { get; set; }
+        public string DesktopMaterial { get; set; }
+  
         public const int MINWIDTH = 24;
         public const int MAXWIDTH = 96;
         public const int MINDEPTH = 12;
@@ -21,4 +20,12 @@ namespace MegaDesk_3_AlyssaHundley
 
 
     }
+    public enum DesktopMaterial
+    {
+        Pine = 50,
+        Laminate = 100,
+        Oak = 200,
+        Rosewood = 300,
+        Veneer = 150
+    };
 }
