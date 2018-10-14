@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MegaDesk_3_AlyssaHundley
 {
@@ -66,7 +67,7 @@ namespace MegaDesk_3_AlyssaHundley
             }
             catch (Exception)
             {
-                MessageBox.Show("Error with populating ListView using StreamReader." + "\n\n" + ex);
+                MessageBox.Show("Error with populating ListView using StreamReader.");
                 throw;
             }
         }

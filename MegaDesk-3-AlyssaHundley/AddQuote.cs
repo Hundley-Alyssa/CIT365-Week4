@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MegaDesk_3_AlyssaHundley
 {
@@ -146,9 +147,9 @@ private void AddDeskButton_Click(object sender, EventArgs e)
                 string cFile = @"quotes.txt";
                 if (!File.Exists(cFile))
                 {
-                    using (StreamWriter sw = FileDialog.CreateText(SearchQuotes.txt)) {}
+                    using (StreamWriter sw = File.CreateText(SearchQuotes.txt)) {}
                 }
-                using (StreamWriter swa = FileDialog.AppendText("quotes.txt")) { swa.WriteLine(DeskRecord); }
+                using (StreamWriter swa = File.AppendText("quotes.txt")) { swa.WriteLine(DeskRecord); }
 
                 DeskQuoteView NewOrderView = new DeskQuoteView(NewQuote);
 
@@ -161,7 +162,7 @@ private void AddDeskButton_Click(object sender, EventArgs e)
             catch (Exception)
             {
                 MessageBox.Show(Exception.Message);
-                throw;
+                
             }
         }
     }

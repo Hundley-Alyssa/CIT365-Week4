@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MegaDesk_3_AlyssaHundley
 {
-    public partial class DisplayQuote : Form
+    public partial class DeskQuoteView : Form
     {
-        public DisplayQuote()
+        public DeskQuoteView()
         {
             InitializeComponent();
+        }
+
+        private void DeskQuoteView_Load(object sender, EventArgs e)
+        {
+            DeskQuoteView NewQuote = new DeskQuoteView(NewQuote);
         }
     }
 }
